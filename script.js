@@ -10,6 +10,16 @@ const projects = [
             { name: "JavaScript", class: "javascript" }
         ]
     },
+
+    {
+        name: "Figma Projects",
+        description: "A small collection of Figma sketches created for brainstorming and exploring design ideas.", 
+        url: "https://www.figma.com/design/l16NinT3AyE7nwIilpCinv/Emma-L%C3%B6vgren-(PUBLIC-Projects)?node-id=0-1&t=ybBebXRd28HGAIpa-1",
+        image: "assets/images/figma-placeholder.png", 
+        languages: [
+            { name: "Design/Sketches", class: "ux" }
+        ]
+    },
     
     {
         name: "Migraine Management Platform [Thesis work]",
@@ -22,12 +32,12 @@ const projects = [
     },
 
     {
-        name: "Migraine Management Platform [Thesis work]",
-        description: "Migraine Management Platform: Bridging Mobile, Wearable Tracking, and Treatment Devices. This degree project investigates integrating a mobile application with a prototype treatment device and health data from smartwatches, with smartwatch integration explored only in theory. It focuses on Bluetooth communication, evaluates Flutter development, and delivers two apps: one experimental prototype and one layout concept.",
-        image: "assets/images/thesis-work-color.png",
-        url: "https://www.diva-portal.org/smash/record.jsf?pid=diva2:1891301",
+        name: "A motivational tool for students : Visual priming exercises prior to reading and students' experience of motivation [Thesis work]",
+        description: "This project explores students' study approaches and motivation when reading course literature using memory techniques and priming. A prototype was tested by five users, revealing mixed feedback on its usefulness. The study suggests improving the clarity of exercises and their connection to the reading material for better effectiveness.",
+        image: "assets/images/thesis-work-ux.png",
+        url: "https://www.diva-portal.org/smash/record.jsf?pid=diva2:1206748",
         languages: [
-            { name: "Flutter", class: "flutter" }
+            { name: "UX", class: "ux" }
         ]
     },
 ];
