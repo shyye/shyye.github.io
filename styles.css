@@ -25,7 +25,7 @@ header {
 }
 
 .header-title {
-    margin: 0.5em 0;
+    margin: 0.5em;
     font-size: 2em;
 }
 
@@ -73,8 +73,11 @@ header {
 }
 
 /* Main Content */
+/* TODO: should handle width attribute here instead */
 .main-contianer {
+    margin: 1.5em;
     display: flex;
+    flex-wrap: wrap;
     gap: 2em;
 }
 
@@ -101,7 +104,7 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
-    max-width: 50em;
+    max-width: 50.5em;
 }
 
 /* Project Text */
@@ -182,76 +185,151 @@ header {
 }
 
 
+/* TODO: Seperate css files */
 /* Roboto Font */
 .roboto-thin {
     font-family: "Roboto", serif;
     font-weight: 100;
     font-style: normal;
-  }
-  
-  .roboto-light {
+}
+
+.roboto-light {
     font-family: "Roboto", serif;
     font-weight: 300;
     font-style: normal;
-  }
-  
-  .roboto-regular {
+}
+
+.roboto-regular {
     font-family: "Roboto", serif;
     font-weight: 400;
     font-style: normal;
-  }
-  
-  .roboto-medium {
+}
+
+.roboto-medium {
     font-family: "Roboto", serif;
     font-weight: 500;
     font-style: normal;
-  }
-  
-  .roboto-bold {
+}
+
+.roboto-bold {
     font-family: "Roboto", serif;
     font-weight: 700;
     font-style: normal;
-  }
-  
-  .roboto-black {
+}
+
+.roboto-black {
     font-family: "Roboto", serif;
     font-weight: 900;
     font-style: normal;
-  }
-  
-  .roboto-thin-italic {
+}
+
+.roboto-thin-italic {
     font-family: "Roboto", serif;
     font-weight: 100;
     font-style: italic;
-  }
-  
-  .roboto-light-italic {
+}
+
+.roboto-light-italic {
     font-family: "Roboto", serif;
     font-weight: 300;
     font-style: italic;
-  }
-  
-  .roboto-regular-italic {
+}
+
+.roboto-regular-italic {
     font-family: "Roboto", serif;
     font-weight: 400;
     font-style: italic;
-  }
-  
-  .roboto-medium-italic {
+}
+
+.roboto-medium-italic {
     font-family: "Roboto", serif;
     font-weight: 500;
     font-style: italic;
-  }
-  
-  .roboto-bold-italic {
+}
+
+.roboto-bold-italic {
     font-family: "Roboto", serif;
     font-weight: 700;
     font-style: italic;
-  }
-  
-  .roboto-black-italic {
+}
+
+.roboto-black-italic {
     font-family: "Roboto", serif;
     font-weight: 900;
     font-style: italic;
-  }
-  
+}
+
+
+/* Instagram Posts */
+
+#instagram-contet {
+    margin-top: 4em;
+    margin-bottom: 5em;
+}
+
+#instagram-wrapper {
+    max-width: 640px;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.instagram-item-wrapper {
+    display: block;
+    max-width: 200px;
+    text-decoration: none;
+}
+
+.instagram-image-wrapper {
+    max-width: 100%;
+    border-radius: 8px;
+    filter: grayscale(100%); /* Initial state - less color */
+    transition: filter 0.3s ease-in-out;
+}
+
+.instagram-item-wrapper:hover .instagram-image-wrapper {
+    filter: grayscale(0%); /* Full color on hover */
+}
+
+@media screen and (max-width: 768px) {
+    .main-contianer {
+        flex-direction: column; /* Stack everything vertically */
+        gap: 1em;
+    }
+    
+    .sidebar {
+        width: 100%;
+        text-align: center; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+        gap: 0.8em;
+        padding-bottom: 2em;
+        border-bottom: 1px solid lightgray;
+        margin-bottom: 1em;
+    }
+
+    .project-card {
+        flex-direction: column; 
+    }
+
+    .project-card-text-wrapper {
+        max-width: 100%;
+    }
+
+    .project-card-image-wrapper {
+        width: 100%;
+    }
+
+    #instagram-wrapper {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .instagram-item-wrapper {
+        max-width: 100%;
+    }
+}
