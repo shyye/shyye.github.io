@@ -2,7 +2,7 @@ const projects = [
     {
         name: "2DT304-Project-with-Embedded-System",
         description: "Student project about lifebuoy monitoring to ensure that lifebuoys are in the correct positions or discover if they are gone.",
-        image: "images\\2DT304-Project-with-Embedded-System.jpg", 
+        image: "assets/images/2DT304-Project-with-Embedded-System.jpg", 
         url: "https://github.com/shyye/2DT304-Project-with-Embedded-System",
         languages: [
             { name: "C", class: "c" },
@@ -10,14 +10,34 @@ const projects = [
             { name: "JavaScript", class: "javascript" }
         ]
     },
+
+    {
+        name: "Figma Projects",
+        description: "A small collection of Figma sketches created for brainstorming and exploring design ideas.", 
+        url: "https://www.figma.com/design/l16NinT3AyE7nwIilpCinv/Emma-L%C3%B6vgren-(PUBLIC-Projects)?node-id=0-1&t=ybBebXRd28HGAIpa-1",
+        image: "assets/images/figma-placeholder.png", 
+        languages: [
+            { name: "Design/Sketches", class: "ux" }
+        ]
+    },
     
     {
         name: "Migraine Management Platform [Thesis work]",
         description: "Migraine Management Platform: Bridging Mobile, Wearable Tracking, and Treatment Devices. This degree project investigates integrating a mobile application with a prototype treatment device and health data from smartwatches, with smartwatch integration explored only in theory. It focuses on Bluetooth communication, evaluates Flutter development, and delivers two apps: one experimental prototype and one layout concept.",
-        image: "images\\thesis-work-color.png",
+        image: "assets/images/thesis-work-color.png",
         url: "https://www.diva-portal.org/smash/record.jsf?pid=diva2:1891301",
         languages: [
             { name: "Flutter", class: "flutter" }
+        ]
+    },
+
+    {
+        name: "A motivational tool for students : Visual priming exercises prior to reading and students' experience of motivation [Thesis work]",
+        description: "This project explores students' study approaches and motivation when reading course literature using memory techniques and priming. A prototype was tested by five users, revealing mixed feedback on its usefulness. The study suggests improving the clarity of exercises and their connection to the reading material for better effectiveness.",
+        image: "assets/images/thesis-work-ux.png",
+        url: "https://www.diva-portal.org/smash/record.jsf?pid=diva2:1206748",
+        languages: [
+            { name: "UX", class: "ux" }
         ]
     },
 ];
@@ -72,3 +92,71 @@ function renderProjects() {
 // Call the function on page load
 //   document.addEventListener("DOMContentLoaded", renderProjects);
 renderProjects();
+
+
+//TODO: move to seperate js file
+// List of Instagram posts with attributes
+const instagramPosts = [
+    {
+        imagePath: "assets/images-instagram/instagramv51_1.jpg",
+        url: "https://www.instagram.com/dataitlnu/p/CIxsUJcpps1/?img_index=1"
+    },
+    {
+        imagePath: "assets/images-instagram/instagramv51_2-new.jpg",
+        url: "https://www.instagram.com/dataitlnu/p/CI0AZhVJAso/?img_index=1"
+    },
+    {
+        imagePath: "assets/images-instagram/instagramv51_3.jpg",
+        url: "https://www.instagram.com/dataitlnu/p/CI2ZbyqJmh_/?img_index=1"
+    },
+    {
+        imagePath: "assets/images-instagram/instagramv51_4.jpg",
+        url: "https://www.instagram.com/dataitlnu/p/CI5e2mypAQd/"
+    },
+    {
+        imagePath: "assets/images-instagram/instagramv51_5.jpg",
+        url: "https://www.instagram.com/dataitlnu/p/CI7jTjophy7/"
+    },
+    {
+        imagePath: "assets/images-instagram/instagramv51_6.jpg",
+        url: "https://www.instagram.com/dataitlnu/p/CI_NuaHpsCM/?img_index=1"
+    },
+    {
+        imagePath: "assets/images-instagram/instagramv51_7-1.jpg",
+        url: "https://www.instagram.com/dataitlnu/p/CJBTxTQpBkb/?img_index=1"
+    },
+    {
+        imagePath: "assets/images-instagram/instagramv51_7.jpg",
+        url: "https://www.instagram.com/dataitlnu/p/CJBTxTQpBkb/?img_index=1"
+    }    
+];
+
+// Dynamically render posts
+const renderPosts = () => {
+    const container = document.querySelector("#instagram-wrapper");
+    instagramPosts.forEach(post => {
+        // Create a link element that wraps the entire post
+        const link = document.createElement("a");
+        link.href = post.url;
+        link.target = "_blank";
+        link.className = "instagram-item-wrapper";
+
+        // Create an image element
+        const img = document.createElement("img");
+        img.src = post.imagePath;
+        img.alt = "Instagram Post";
+        img.className = "instagram-image-wrapper";
+
+        // Append image to the link
+        link.append(img);
+
+        // Append the link to the container
+        container.append(link);
+    });
+};
+
+// Run the render function after DOM content is loaded
+// document.addEventListener("DOMContentLoaded", renderPosts);
+renderPosts();
+
+
